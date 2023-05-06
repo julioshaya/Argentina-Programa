@@ -337,15 +337,15 @@ public class Tp {
                  System.out.println("-----------------------------------------------------------------------------------------------------------");
                  System.out.println("|                              Ranking Participantes x Total de Puntos Obtenidos                          |");
                  System.out.println("-----------------------------------------------------------------------------------------------------------");
-                 System.out.println("|    Participante   |     Aciertos    |   Puntos X Ronda   |  Puntos x Fase  |      Total de Puntos       |");
+                 System.out.println("|    Participante   |  Puntos x Aciertos    |   Puntos X Ronda   |  Puntos x Fase  |   Total de Puntos    |");
                  System.out.println("-----------------------------------------------------------------------------------------------------------");
                  while (rs.next()) {
                      String salidaParticipante = String.format("%10s",rs.getString("nombre"));
                      String salidaPuntos = String.format("%20s",rs.getString("aciertos"));
-                     String salidaRonda = String.format("%20s",rs.getString("puntosxronda"));
-                     String salidaFase = String.format("%20s",rs.getString("puntosxfase"));
+                     String salidaRonda = String.format("%25s",rs.getString("puntosxronda"));
+                     String salidaFase = String.format("%19s",rs.getString("puntosxfase"));
                      String salidaTotal = String.format("%20s",rs.getString("total"));
-                     String salidaCierre = String.format("%16s","|" );
+                     String salidaCierre = String.format("%12s","|" );
                      System.out.println("|" + salidaParticipante  +   salidaPuntos +  salidaRonda  + salidaFase + salidaTotal + salidaCierre );
                      System.out.println("-----------------------------------------------------------------------------------------------------------");
                  }
